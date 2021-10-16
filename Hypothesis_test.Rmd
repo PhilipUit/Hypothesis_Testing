@@ -1,0 +1,20 @@
+#step 1
+a_training = c(12.9, 13.5, 12.8, 15.6, 17.2, 19.2, 12.6, 15.3, 14.4, 11.3) 
+b_training = c(12.7, 13.6, 12.0, 15.2, 16.8, 20.0, 12.0, 15.9, 16.0, 11.1)
+t.test(a_training, b_training, paired=TRUE)
+qt(0.975, 9)
+#Step 2
+a_training = c(12.9, 13.5, 12.8, 15.6, 17.2, 19.2, 12.6, 15.3, 14.4, 11.3) 
+b_training = c(12.0, 12.2, 11.2, 13.0, 15.0, 15.8, 12.2, 13.4, 12.9, 11.0) 
+t.test(a_training, b_training, paired=TRUE, alt="less") 
+# Paired t-test 3 Dataset exercise:
+a_training = c(155,142,145,160,149,152,157,159,166,163,158,161)
+b_training = c(152,142,144,159,150,153,156,160,165,162,159,160)
+t.test(a_training, b_training, paired=TRUE)
+### We see p-value>0.05, therefore no change in blood pressure in XYZ.
+#Blood pressure to ABC drug
+a_training = c(155,	142,	145,	160,	149,	152,	157,	159,	166,	163,	158,	161)
+b_training = c(150,	135,	142,	153,	142,	147,	152,	149,	158,	155,	150,	150)
+t.test(a_training, b_training, paired=TRUE, alt="less") 
+### We reject null hypo, and accept that there is change in blood pressure using drug ABC.
+### Conclusion: We notice that there is greater changes in means of blood pressure of the 12 patients using drug ABC. Drug XYZ has less effect on the patients blood pressure. 
